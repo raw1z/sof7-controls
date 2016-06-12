@@ -74,6 +74,10 @@
         left: 50%;
         background: $right-pane-color;
       }
+
+      .pane-content {
+        width: 80%;
+      }
     }
   }
 } // }}}
@@ -97,6 +101,10 @@
     justify-content: center;
     align-items: center;
     background: $slide-background-color;
+
+    .slide-content {
+      width: 50%;
+    }
   }
 
   & > .nav {

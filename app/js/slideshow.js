@@ -1,21 +1,24 @@
 import Control from 'js/control'
 import NavigationButton from 'js/navigation-button'
+import Slide from 'js/slide'
+import SlideTransitionController from 'js/slide-transition-controller'
 
 class Slideshow extends Control {
-  constructor(selector, paneClass) {
+  constructor(selector, transitionStrategy) {
     super(selector);
-    this.createSlides(paneClass);
+    this.transitionController = new SlideTransitionController(transitionStrategy);
+    this.createSlides();
     this.createNavButtons();
     this.setupNavButtons();
   }
 
-  createSlides(paneClass) {
+  createSlides() {
     let slidesElements = this.$('> .slide').toArray();
     var previousSlide = null;
     var slides = []
 
     for (var slideElement of slidesElements) {
-      let slide = new paneClass(slideElement);
+      let slide = new Slide(slideElement);
       slides.push(slide);
 
       if (previousSlide) {
@@ -57,28 +60,22 @@ class Slideshow extends Control {
   }
 
   showPreviousSlide() {
-    if (this.currentSlide.previous) {
-      this.currentSlide.hide();
-      this.currentSlide.previous.show();
-      this.currentSlide = this.currentSlide.previous;
+    this.currentSlide =
+      this.transitionController.backward(this.currentSlide);
 
-      this.forwardButton.show()
-      if (!this.currentSlide.previous) {
-        this.backwardButton.hide();
-      }
+    this.forwardButton.show()
+    if (!this.currentSlide.previous) {
+      this.backwardButton.hide();
     }
   }
 
   showNextSlide() {
-    if (this.currentSlide.next) {
-      this.currentSlide.hide();
-      this.currentSlide.next.show();
-      this.currentSlide = this.currentSlide.next;
+    this.currentSlide =
+      this.transitionController.forward(this.currentSlide);
 
-      this.backwardButton.show();
-      if (!this.currentSlide.next) {
-        this.forwardButton.hide();
-      }
+    this.backwardButton.show();
+    if (!this.currentSlide.next) {
+      this.forwardButton.hide();
     }
   }
 }

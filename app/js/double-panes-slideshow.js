@@ -1,9 +1,10 @@
 import Slideshow from 'js/slideshow'
-import DoublePanesSlide from 'js/double-panes-slide'
+import DoublePanesSlideTransitionStrategy from 'js/double-panes-slide-transition-strategy'
 
 class DoublePanesSlideshow extends Slideshow {
   constructor(selector) {
-    super(selector, DoublePanesSlide);
+    let transitionStrategy = new DoublePanesSlideTransitionStrategy()
+    super(selector, transitionStrategy);
   }
 }
 

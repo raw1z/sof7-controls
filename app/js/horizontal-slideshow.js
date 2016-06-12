@@ -1,9 +1,10 @@
 import Slideshow from 'js/slideshow'
-import HorizontalSlide from 'js/horizontal-slide'
+import HorizontalSlideTransitionStrategy from 'js/horizontal-slide-transition-strategy'
 
 class HorizontalSlideshow extends Slideshow {
   constructor(selector) {
-    super(selector, HorizontalSlide);
+    let transitionStrategy = new HorizontalSlideTransitionStrategy();
+    super(selector, transitionStrategy);
   }
 }
 

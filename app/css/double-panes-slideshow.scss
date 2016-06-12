@@ -1,0 +1,144 @@
+.double-panes-slideshow { // {{{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  $left-pane-color: #2980b9;
+  $right-pane-color: #fff;
+  $arrow-size: 30px;
+  $arrow-color: #fff;
+
+  & > .nav {
+    position: absolute;
+    width: 50%;
+    height: $arrow-size;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 900;
+
+    &.nav-backward {
+      a {
+        transform: translateY($arrow-size/2) rotateZ(45deg);
+      }
+    }
+
+    &.nav-forward {
+      bottom: 0;
+
+      a {
+        transform: translateY(-$arrow-size/2) rotateZ(45deg);
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: $arrow-size;
+      height: $arrow-size;
+      background: $arrow-color;
+      cursor: pointer;
+      box-shadow: 0 0 0.5rem transparentize(#222, 0.5);
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  & > .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:100;
+
+    .pane {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.pane-left {
+        left: 0;
+        background: $left-pane-color;
+        color: #fff;
+      }
+
+      &.pane-right {
+        left: 50%;
+        background: $right-pane-color;
+      }
+    }
+  }
+} // }}}
+
+.horizontal-slideshow { // {{{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  $slide-background-color: #fff;
+  $slide-color: #222;
+  $arrow-size: 30px;
+  $arrow-color: #2980b9;
+
+  & > .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $slide-background-color;
+  }
+
+  & > .nav {
+    position: absolute;
+    top: 0;
+    z-index: 900;
+    overflow: hidden;
+    width: $arrow-size;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &.nav-backward {
+      left: 0;
+      a {
+        transform: translateX($arrow-size/2) rotateZ(45deg);
+      }
+    }
+
+    &.nav-forward {
+      right: 0;
+      a {
+        transform: translateX(-$arrow-size/2) rotateZ(45deg);
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: $arrow-size;
+      height: $arrow-size;
+      background: $arrow-color;
+      cursor: pointer;
+      box-shadow: 0 0 0.5rem transparentize(#222, 0.5);
+      transform-origin: center center;
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+} // }}}
+

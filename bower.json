@@ -1,0 +1,17 @@
+{
+  "name": "sof7-controls",
+  "description": "Collection of controls used by sof7",
+  "main": "dist/sof7-controls.js",
+  "authors": [
+    "Rawane Zossou <dev@raw1z.fr>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

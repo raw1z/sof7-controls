@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Sof7</title>
+    <script src="//use.edgefonts.net/montserrat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/sof7-controls.js"></script>
+    <link rel="stylesheet" href="sof7-controls.css">
+  </head>
+  <body style="font-family: montserrat, sans-serif; width: 100vw; height: 100vh; overflow: hidden">
+    <div id="slideshow" class="double-panes-slideshow">
+      <div class="slide">
+        <div class="pane pane-left">slide1</div>
+        <div class="pane pane-right">
+          <div id="h-slideshow" class="horizontal-slideshow">
+            <div class="slide">
+              h-slide1
+            </div>
+            <div class="slide">
+              h-slide2
+            </div>
+            <div class="slide">
+              h-slide3
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="pane pane-left">slide2</div>
+        <div class="pane pane-right">slide2</div>
+      </div>
+
+      <div class="slide">
+        <div class="pane pane-left">slide3</div>
+        <div class="pane pane-right">slide3</div>
+      </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        DoublePanesSlideshow = require('js/double-panes-slideshow').default;
+        window.slideshow = new DoublePanesSlideshow("#slideshow");
+
+        HorizontalSlideshow = require('js/horizontal-slideshow').default;
+        window.slideshow = new HorizontalSlideshow("#h-slideshow");
+      });
+    </script>
+  </body>
+</html>

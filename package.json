@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.0",
+    "babel-brunch": "^6.0",
+    "babel-preset-react": "^6.0",
+    "brunch": "^2.0",
+    "coffee-script-brunch": "^2.0.0",
+    "normalize.css": "^4.1.1",
+    "postcss-brunch": "^0.5",
+    "sass-brunch": "^2.0",
+    "uglify-js-brunch": "^2.0"
+  }
+}

@@ -12,8 +12,7 @@ class DoublePanesSlideTransitionStrategy extends AnimatedSlideTransitionStrategy
       })
       .from(to.$('.pane-left .pane-content'), 0.5, {y: "100%", autoAlpha: 0, ease: Power4.easeInOut})
       .from(to.$('.pane-left h1'), 0.5, {y: -100, autoAlpha: 0}, "-=0.5")
-      .from(to.$('.pane-left p'), 0.5, {y: 100, autoAlpha: 0}, "-=0.5")
-      .from(to.$('.pane-right'), 0.5, {autoAlpha: 0}, "-=0.5");
+      .from(to.$('.pane-left p'), 0.5, {y: 100, autoAlpha: 0}, "-=0.5");
   }
 
 }

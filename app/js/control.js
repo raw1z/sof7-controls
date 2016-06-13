@@ -1,3 +1,5 @@
+let $ = require('jquery');
+
 class Control {
   constructor(selector) {
     if (selector.selector) {

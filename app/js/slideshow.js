@@ -30,7 +30,7 @@ class Slideshow extends Control {
 
     this.slides = slides;
     this.currentSlide = this.slides[0];
-    this.currentSlide.show();
+    this.currentSlide.bringToFront();
   }
 
   createNavButtons() {

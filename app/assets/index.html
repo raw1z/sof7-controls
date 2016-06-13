@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>Sof7</title>
-    <script src="//use.edgefonts.net/montserrat.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/sof7-controls.js"></script>
     <link rel="stylesheet" href="sof7-controls.css">
     <style type="text/css" media="screen">
+      body {
+        font-family: Montserrat, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
       .pane-content p {
         text-align: justify;
       }
@@ -19,9 +24,9 @@
       }
     </style>
   </head>
-  <body style="font-family: montserrat, sans-serif; width: 100vw; height: 100vh; overflow: hidden">
+  <body>
     <div id="slideshow" class="double-panes-slideshow">
-      <div class="slide">
+      <div class="slide" data-id="slide1">
         <div class="pane pane-left">
           <div class="pane-content">
             <h1>Title 1</h1>
@@ -31,7 +36,7 @@
 
         <div class="pane pane-right">
           <div id="h-slideshow" class="horizontal-slideshow">
-            <div class="slide">
+            <div class="slide" data-id="slide1">
               <div class="slide-content">
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr
@@ -39,7 +44,7 @@
                 <h1>FOO</h1>
               </div>
             </div>
-            <div class="slide">
+            <div class="slide" data-id="slide2">
               <div class="slide-content">
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr
@@ -47,7 +52,7 @@
                 <h1>BAR</h1>
               </div>
             </div>
-            <div class="slide">
+            <div class="slide" data-id="slide3">
               <div class="slide-content">
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr
@@ -59,7 +64,7 @@
         </div>
       </div>
 
-      <div class="slide">
+      <div class="slide" data-id="slide2">
         <div class="pane pane-left">
           <div class="pane-content">
             <h1>Title 2</h1>
@@ -69,7 +74,7 @@
         <div class="pane pane-right">slide2</div>
       </div>
 
-      <div class="slide">
+      <div class="slide" data-id="slide3">
         <div class="pane pane-left">
           <div class="pane-content">
             <h1>Title 3</h1>
@@ -81,7 +86,7 @@
     </div>
 
     <script type="text/javascript" charset="utf-8">
-      $(function() {
+      document.addEventListener('DOMContentLoaded', function() {
         DoublePanesSlideshow = require('js/double-panes-slideshow').default;
         window.slideshow = new DoublePanesSlideshow("#slideshow");
 

@@ -3,13 +3,27 @@ import Control from 'js/control'
 class Slide extends Control {
   constructor(selector) {
     super(selector);
+    this.id = this.$().attr('data-id');
   }
 
-  hide() {
+  toggleVisibility() {
+    if (this.isVisible()) {
+      this.sendToBack()
+    }
+    else {
+      this.bringToFront()
+    }
+  }
+
+  isVisible() {
+    return (this.element.css('z-index') === "300");
+  }
+
+  sendToBack() {
     this.element.css('z-index', 100);
   }
 
-  show() {
+  bringToFront() {
     this.element.css('z-index', 300);
   }
 

@@ -1,12 +1,12 @@
 class SlideTransitionStrategy {
   forward(from, to) {
-    from.hide();
-    to.show();
+    from.sendToBack();
+    to.bringToFront();
   }
 
   backward(from, to) {
-    from.hide();
-    to.show();
+    from.sendToBack();
+    to.bringToFront();
   }
 }
 

@@ -1,0 +1,44 @@
+@mixin slideshow($arrow-size, $arrow-color) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  & > .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  & > .nav {
+    position: absolute;
+    z-index: 900;
+    display: flex;
+    overflow: hidden;
+
+    a {
+      display: inline-block;
+      width: $arrow-size;
+      height: $arrow-size;
+      background: $arrow-color;
+      cursor: pointer;
+      box-shadow: 0 0 0.5rem transparentize(#222, 0.5);
+      transform-origin: center center;
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &.disabled {
+      opacity: 0;
+
+      a {
+        cursor: default;
+      }
+    }
+  }
+}

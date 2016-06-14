@@ -7,11 +7,11 @@ class NavigationButton extends Control {
   }
 
   show() {
-    this.element.css('opacity', 1);
+    this.element.removeClass('disabled');
   }
 
   hide() {
-    this.element.css('opacity', 0);
+    this.element.addClass('disabled');
   }
 }
 

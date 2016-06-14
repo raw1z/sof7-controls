@@ -1,0 +1,165 @@
+@mixin flexbox-layout($type) {
+  @if $type == row {
+    flex-flow: row nowrap;
+  }
+  @else if $type == row-wrap {
+    flex-flow: row wrap;
+  }
+  @else if $type == row-reverse {
+    flex-flow: row-reverse;
+  }
+  @else if $type == column-reverse {
+    flex-flow: column-reverse;
+  }
+  @else {
+    flex-direction: column;
+  }
+}
+
+@mixin flexbox-justify($type) {
+  @if $type == start {
+    justify-content: flex-start;
+  }
+  @else if $type == end {
+    justify-content: flex-end;
+  }
+  @else if $type == space-between {
+    justify-content: space-between;
+  }
+  @else if $type == space-around {
+    justify-content: space-around;
+  }
+  @else {
+    justify-content: center;
+  }
+}
+
+@mixin flexbox-align($type) {
+  @if $type == start {
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+  @else if $type == end {
+    align-items: flex-end;
+    align-content: flex-end;
+  }
+  @else if $type == stretch {
+    align-items: stretch;
+    align-content: stretch;
+  }
+  @else if $type == space-between {
+    align-content: space-between;
+  }
+  @else if $type == space-around {
+    align-content: space-around;
+  }
+  @else {
+    align-items: center;
+    align-content: center;
+  }
+}
+
+@mixin flexbox-flex($amount:1) {
+  flex: $amount;
+}
+
+@mixin flexbox-fill($type) {
+  @if $type == vertical {
+    height: 100%;
+    min-height: 100%;
+  }
+  @else {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@mixin flexbox-stretch-self {
+  align-self: stretch;
+}
+
+@mixin flexbox {
+  display: flex;
+  @include flexbox-layout(row);
+  @include flexbox-justify(center);
+  @include flexbox-align(center);
+
+  // layout
+  &.row-layout {
+    @include flexbox-layout(row);
+  }
+  &.row-wrap-layout {
+    @include flexbox-layout(row-wrap);
+  }
+  &.column-layout {
+    @include flexbox-layout(column);
+  }
+
+  // justify
+  &.justify-left {
+    @include flexbox-justify(left);
+  }
+  &.justify-right {
+    @include flexbox-justify(right);
+  }
+  &.justify-center {
+    @include flexbox-justify(center);
+  }
+  &.justify-space-between {
+    @include flexbox-justify(space-between);
+  }
+  &.justify-space-around {
+    @include flexbox-justify(space-around);
+  }
+
+  // align
+  &.align-top {
+    @include flexbox-align(top);
+  }
+  &.align-bottom {
+    @include flexbox-align(bottom);
+  }
+  &.align-center {
+    @include flexbox-align(center);
+  }
+  &.align-stretch {
+    @include flexbox-align(stretch);
+  }
+  &.align-space-between {
+    @include flexbox-align(space-between);
+  }
+  &.align-space-around {
+    @include flexbox-align(space-around);
+  }
+
+  .flex {
+    @include flexbox-flex;
+  }
+  .flex-2 {
+    @include flexbox-flex(2);
+  }
+  .flex-3 {
+    @include flexbox-flex(3);
+  }
+  .flex-4 {
+    @include flexbox-flex(4);
+  }
+  .flex-5 {
+    @include flexbox-flex(5);
+  }
+  .flex-6 {
+    @include flexbox-flex(6);
+  }
+
+  .fill-vertical {
+    @include flexbox-fill(vertical);
+  }
+  .fill-horizontal {
+    @include flexbox-fill(horizontal);
+  }
+}
+
+@mixin flexible-container {
+  @include flexbox;
+}
+

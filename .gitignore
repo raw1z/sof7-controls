@@ -1,1 +1,6 @@
-dist
+dist/images
+dist/index.html
+dist/pictures-wall.html
+dist/slideshow.html
+dist/sof7-controls.css.map
+dist/sof7-controls.js.map

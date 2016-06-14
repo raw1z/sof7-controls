@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Sof7</title>
+    <script src="/sof7-controls.js"></script>
+    <link rel="stylesheet" href="sof7-controls.css">
+    <style type="text/css" media="screen">
+      body {
+        font-family: Montserrat, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .pane-content p {
+        text-align: justify;
+      }
+
+      .slide-content h1, .slide-content p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slideshow" class="double-panes-slideshow">
+      <div class="slide" data-id="slide1">
+        <div class="pane pane-left">
+          <div class="pane-content">
+            <h1>Title 1</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="pane pane-right">
+          <div id="h-slideshow" class="horizontal-slideshow">
+            <div class="slide" data-id="slide1">
+              <div class="slide-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                </p>
+                <h1>FOO</h1>
+              </div>
+            </div>
+            <div class="slide" data-id="slide2">
+              <div class="slide-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                </p>
+                <h1>BAR</h1>
+              </div>
+            </div>
+            <div class="slide" data-id="slide3">
+              <div class="slide-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                </p>
+                <h1>BAZ</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" data-id="slide2">
+        <div class="pane pane-left">
+          <div class="pane-content">
+            <h1>Title 2</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="pane pane-right">slide2</div>
+      </div>
+
+      <div class="slide" data-id="slide3">
+        <div class="pane pane-left">
+          <div class="pane-content">
+            <h1>Title 3</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="pane pane-right">slide3</div>
+      </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+      document.addEventListener('DOMContentLoaded', function() {
+        DoublePanesSlideshow = require('js/double-panes-slideshow').default;
+        window.slideshow = new DoublePanesSlideshow("#slideshow");
+
+        HorizontalSlideshow = require('js/horizontal-slideshow').default;
+        window.slideshow = new HorizontalSlideshow("#h-slideshow");
+      });
+    </script>
+  </body>
+</html>

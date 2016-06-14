@@ -10,89 +10,31 @@
     <style type="text/css" media="screen">
       body {
         font-family: Montserrat, sans-serif;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+        color: #222;
+        padding: 2rem;
       }
 
-      .pane-content p {
-        text-align: justify;
+      h1 {
+        color: #2980b9;
+        font-weight: 300;
+        border-bottom: thin solid #2980b9;
       }
 
-      .slide-content h1, .slide-content p {
-        text-align: center;
+      a:link, a:visited {
+        color: #222;
+        text-decoration: none;
+        font-weight: 300;
+      }
+
+      a:hover {
+        color: #2980b9;
       }
     </style>
   </head>
   <body>
-    <div id="slideshow" class="double-panes-slideshow">
-      <div class="slide" data-id="slide1">
-        <div class="pane pane-left">
-          <div class="pane-content">
-            <h1>Title 1</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-
-        <div class="pane pane-right">
-          <div id="h-slideshow" class="horizontal-slideshow">
-            <div class="slide" data-id="slide1">
-              <div class="slide-content">
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
-                </p>
-                <h1>FOO</h1>
-              </div>
-            </div>
-            <div class="slide" data-id="slide2">
-              <div class="slide-content">
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
-                </p>
-                <h1>BAR</h1>
-              </div>
-            </div>
-            <div class="slide" data-id="slide3">
-              <div class="slide-content">
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr
-                </p>
-                <h1>BAZ</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide" data-id="slide2">
-        <div class="pane pane-left">
-          <div class="pane-content">
-            <h1>Title 2</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="pane pane-right">slide2</div>
-      </div>
-
-      <div class="slide" data-id="slide3">
-        <div class="pane pane-left">
-          <div class="pane-content">
-            <h1>Title 3</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="pane pane-right">slide3</div>
-      </div>
-    </div>
-
-    <script type="text/javascript" charset="utf-8">
-      document.addEventListener('DOMContentLoaded', function() {
-        DoublePanesSlideshow = require('js/double-panes-slideshow').default;
-        window.slideshow = new DoublePanesSlideshow("#slideshow");
-
-        HorizontalSlideshow = require('js/horizontal-slideshow').default;
-        window.slideshow = new HorizontalSlideshow("#h-slideshow");
-      });
-    </script>
+    <h1>Sof7 Controls</h1>
+    <ul>
+      <li><a href="/slideshow.html">Slideshow</a></li>
+    </ul>
   </body>
 </html>

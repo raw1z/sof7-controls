@@ -7,8 +7,15 @@
   ],
   "license": "MIT",
   "homepage": "",
+  "main": [
+    "dist/sof7-controls.js",
+    "dist/sof7-controls.css"
+  ],
   "ignore": [
     "**/.*",
+    "dist/images",
+    "dist/*.html",
+    "dist/*.css.map",
     "node_modules",
     "bower_components",
     "test",

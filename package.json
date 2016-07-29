@@ -1,4 +1,5 @@
 {
+  "version": "0.1.0",
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^6.0",
@@ -13,6 +14,7 @@
     "jquery": "^3.0.0"
   },
   "dependencies": {
-    "gsap": "^1.18.5"
+    "gsap": "^1.18.5",
+    "scrollmagic": "^2.0.5"
   }
 }

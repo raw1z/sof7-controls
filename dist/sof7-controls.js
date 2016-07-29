@@ -21785,8 +21785,8 @@ var Slideshow = function (_Control) {
 exports.default = Slideshow;
 });
 
-require.alias("gsap/src/uncompressed/TweenMax.js", "gsap");
 require.alias("jquery/dist/jquery.js", "jquery");
+require.alias("gsap/src/uncompressed/TweenMax.js", "gsap");
 require.alias("process/browser.js", "process");
 require.alias("scrollmagic/scrollmagic/uncompressed/ScrollMagic.js", "scrollmagic");process = require('process');require.register("___globals___", function(exports, require, module) {
   

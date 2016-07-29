@@ -1,4 +1,5 @@
 {
+  "version": "0.1.0",
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^6.0",

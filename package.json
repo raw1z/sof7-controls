@@ -13,6 +13,7 @@
     "jquery": "^3.0.0"
   },
   "dependencies": {
-    "gsap": "^1.18.5"
+    "gsap": "^1.18.5",
+    "scrollmagic": "^2.0.5"
   }
 }

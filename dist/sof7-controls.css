@@ -418,9 +418,415 @@ textarea {
   font: inherit; /* 2 */
 }
 
-.double-panes-slideshow{position:relative;width:100%;height:100%;overflow:hidden}.double-panes-slideshow>.slide{position:absolute;width:100%;height:100%}.double-panes-slideshow>.nav{position:absolute;z-index:900;display:-webkit-box;display:-ms-flexbox;display:flex;overflow:hidden}.double-panes-slideshow>.nav a{display:inline-block;width:30px;height:30px;background:#fff;cursor:pointer;box-shadow:0 0 0.5rem rgba(34,34,34,0.5);-webkit-transform-origin:center center;transform-origin:center center;-webkit-transition: opacity 0.5s;transition:opacity 0.5s;opacity:0.5;border-radius:5px}.double-panes-slideshow>.nav a:hover{opacity:0.9}.double-panes-slideshow>.nav.disabled{opacity:0}.double-panes-slideshow>.nav.disabled a{cursor:default}.double-panes-slideshow>.slide .pane{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center;position:absolute;top:0;width:50%;height:100%}.double-panes-slideshow>.slide .pane.row-layout{-ms-flex-flow:row nowrap;flex-flow:row nowrap}.double-panes-slideshow>.slide .pane.row-wrap-layout{-ms-flex-flow:row wrap;flex-flow:row wrap}.double-panes-slideshow>.slide .pane.column-layout{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.double-panes-slideshow>.slide .pane.justify-left{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.double-panes-slideshow>.slide .pane.justify-right{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.double-panes-slideshow>.slide .pane.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.double-panes-slideshow>.slide .pane.justify-space-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.double-panes-slideshow>.slide .pane.justify-space-around{-ms-flex-pack:distribute;justify-content:space-around}.double-panes-slideshow>.slide .pane.align-top{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.double-panes-slideshow>.slide .pane.align-bottom{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.double-panes-slideshow>.slide .pane.align-center{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.double-panes-slideshow>.slide .pane.align-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;align-content:stretch}.double-panes-slideshow>.slide .pane.align-space-between{-ms-flex-line-pack:justify;align-content:space-between}.double-panes-slideshow>.slide .pane.align-space-around{-ms-flex-line-pack:distribute;align-content:space-around}.double-panes-slideshow>.slide .pane .flex{-webkit-box-flex:1;-ms-flex:1;flex:1}.double-panes-slideshow>.slide .pane .flex-2{-webkit-box-flex:2;-ms-flex:2;flex:2}.double-panes-slideshow>.slide .pane .flex-3{-webkit-box-flex:3;-ms-flex:3;flex:3}.double-panes-slideshow>.slide .pane .flex-4{-webkit-box-flex:4;-ms-flex:4;flex:4}.double-panes-slideshow>.slide .pane .flex-5{-webkit-box-flex:5;-ms-flex:5;flex:5}.double-panes-slideshow>.slide .pane .flex-6{-webkit-box-flex:6;-ms-flex:6;flex:6}.double-panes-slideshow>.slide .pane .fill-vertical{height:100%;min-height:100%}.double-panes-slideshow>.slide .pane .fill-horizontal{width:100%;min-width:100%}.double-panes-slideshow>.slide .pane.pane-left{left:0;background:#2980b9;color:#fff}.double-panes-slideshow>.slide .pane.pane-right{left:50%;background:#fff}.double-panes-slideshow>.slide .pane .pane-content{width:80%}.double-panes-slideshow>.nav{width:50%;height:30px;overflow:hidden;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.double-panes-slideshow>.nav.nav-backward a{-webkit-transform:translateY(15px) rotateZ(45deg);transform:translateY(15px) rotateZ(45deg)}.double-panes-slideshow>.nav.nav-forward{bottom:0}.double-panes-slideshow>.nav.nav-forward a{-webkit-transform:translateY(-15px) rotateZ(45deg);transform:translateY(-15px) rotateZ(45deg)}
+/* line 9, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+.double-panes-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  /* line 7, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+  .double-panes-slideshow > .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  /* line 13, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+  .double-panes-slideshow > .nav {
+    position: absolute;
+    z-index: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden; }
+    /* line 19, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+    .double-panes-slideshow > .nav a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 0.5rem rgba(34, 34, 34, 0.5);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      border-radius: 5px; }
+      /* line 31, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+      .double-panes-slideshow > .nav a:hover {
+        opacity: 0.9; }
+    /* line 36, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+    .double-panes-slideshow > .nav.disabled {
+      opacity: 0; }
+      /* line 39, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+      .double-panes-slideshow > .nav.disabled a {
+        cursor: default; }
+  /* line 13, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+  .double-panes-slideshow > .slide .pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%; }
+    /* line 88, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.row-layout {
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+    /* line 91, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.row-wrap-layout {
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+    /* line 94, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.column-layout {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    /* line 99, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.justify-left {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 102, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.justify-right {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 105, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.justify-center {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 108, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.justify-space-between {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    /* line 111, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.justify-space-around {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+    /* line 116, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-top {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 119, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-bottom {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 122, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-center {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 125, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-stretch {
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+                  -ms-grid-row-align: stretch;
+              align-items: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch; }
+    /* line 128, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-space-between {
+      -ms-flex-line-pack: justify;
+          align-content: space-between; }
+    /* line 131, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane.align-space-around {
+      -ms-flex-line-pack: distribute;
+          align-content: space-around; }
+    /* line 135, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    /* line 138, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex-2 {
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
+    /* line 141, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex-3 {
+      -webkit-box-flex: 3;
+          -ms-flex: 3;
+              flex: 3; }
+    /* line 144, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex-4 {
+      -webkit-box-flex: 4;
+          -ms-flex: 4;
+              flex: 4; }
+    /* line 147, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex-5 {
+      -webkit-box-flex: 5;
+          -ms-flex: 5;
+              flex: 5; }
+    /* line 150, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .flex-6 {
+      -webkit-box-flex: 6;
+          -ms-flex: 6;
+              flex: 6; }
+    /* line 154, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .fill-vertical {
+      height: 100%;
+      min-height: 100%; }
+    /* line 157, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .double-panes-slideshow > .slide .pane .fill-horizontal {
+      width: 100%;
+      min-width: 100%; }
+    /* line 20, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+    .double-panes-slideshow > .slide .pane.pane-left {
+      left: 0;
+      background: #2980b9;
+      color: #fff; }
+    /* line 26, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+    .double-panes-slideshow > .slide .pane.pane-right {
+      left: 50%;
+      background: #fff; }
+    /* line 31, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+    .double-panes-slideshow > .slide .pane .pane-content {
+      width: 80%; }
+  /* line 37, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+  .double-panes-slideshow > .nav {
+    width: 50%;
+    height: 30px;
+    overflow: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    /* line 44, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+    .double-panes-slideshow > .nav.nav-backward a {
+      -webkit-transform: translateY(15px) rotateZ(45deg);
+              transform: translateY(15px) rotateZ(45deg); }
+    /* line 49, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+    .double-panes-slideshow > .nav.nav-forward {
+      bottom: 0; }
+      /* line 52, /Users/raw1z/workspace/projets/sof7-controls/app/css/double-panes-slideshow.scss */
+      .double-panes-slideshow > .nav.nav-forward a {
+        -webkit-transform: translateY(-15px) rotateZ(45deg);
+                transform: translateY(-15px) rotateZ(45deg); }
 
-.horizontal-slideshow{position:relative;width:100%;height:100%;overflow:hidden}.horizontal-slideshow>.slide{position:absolute;width:100%;height:100%}.horizontal-slideshow>.nav{position:absolute;z-index:900;display:-webkit-box;display:-ms-flexbox;display:flex;overflow:hidden}.horizontal-slideshow>.nav a{display:inline-block;width:30px;height:30px;background:#2980b9;cursor:pointer;box-shadow:0 0 0.5rem rgba(34,34,34,0.5);-webkit-transform-origin:center center;transform-origin:center center;-webkit-transition: opacity 0.5s;transition:opacity 0.5s;opacity:0.5;border-radius:5px}.horizontal-slideshow>.nav a:hover{opacity:0.9}.horizontal-slideshow>.nav.disabled{opacity:0}.horizontal-slideshow>.nav.disabled a{cursor:default}.horizontal-slideshow>.slide{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center;background:#fff}.horizontal-slideshow>.slide.row-layout{-ms-flex-flow:row nowrap;flex-flow:row nowrap}.horizontal-slideshow>.slide.row-wrap-layout{-ms-flex-flow:row wrap;flex-flow:row wrap}.horizontal-slideshow>.slide.column-layout{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.horizontal-slideshow>.slide.justify-left{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.horizontal-slideshow>.slide.justify-right{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.horizontal-slideshow>.slide.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.horizontal-slideshow>.slide.justify-space-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.horizontal-slideshow>.slide.justify-space-around{-ms-flex-pack:distribute;justify-content:space-around}.horizontal-slideshow>.slide.align-top{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.horizontal-slideshow>.slide.align-bottom{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.horizontal-slideshow>.slide.align-center{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.horizontal-slideshow>.slide.align-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;align-content:stretch}.horizontal-slideshow>.slide.align-space-between{-ms-flex-line-pack:justify;align-content:space-between}.horizontal-slideshow>.slide.align-space-around{-ms-flex-line-pack:distribute;align-content:space-around}.horizontal-slideshow>.slide .flex{-webkit-box-flex:1;-ms-flex:1;flex:1}.horizontal-slideshow>.slide .flex-2{-webkit-box-flex:2;-ms-flex:2;flex:2}.horizontal-slideshow>.slide .flex-3{-webkit-box-flex:3;-ms-flex:3;flex:3}.horizontal-slideshow>.slide .flex-4{-webkit-box-flex:4;-ms-flex:4;flex:4}.horizontal-slideshow>.slide .flex-5{-webkit-box-flex:5;-ms-flex:5;flex:5}.horizontal-slideshow>.slide .flex-6{-webkit-box-flex:6;-ms-flex:6;flex:6}.horizontal-slideshow>.slide .fill-vertical{height:100%;min-height:100%}.horizontal-slideshow>.slide .fill-horizontal{width:100%;min-width:100%}.horizontal-slideshow>.slide .slide-content{width:50%}.horizontal-slideshow>.nav{top:0;width:30px;height:100%;-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center}.horizontal-slideshow>.nav.nav-backward{left:0}.horizontal-slideshow>.nav.nav-backward a{-webkit-transform:translateX(15px) rotateZ(45deg);transform:translateX(15px) rotateZ(45deg)}.horizontal-slideshow>.nav.nav-forward{right:0}.horizontal-slideshow>.nav.nav-forward a{-webkit-transform:translateX(-15px) rotateZ(45deg);transform:translateX(-15px) rotateZ(45deg)}
+/* line 9, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+.horizontal-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  /* line 7, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+  .horizontal-slideshow > .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  /* line 13, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+  .horizontal-slideshow > .nav {
+    position: absolute;
+    z-index: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden; }
+    /* line 19, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+    .horizontal-slideshow > .nav a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: #2980b9;
+      cursor: pointer;
+      box-shadow: 0 0 0.5rem rgba(34, 34, 34, 0.5);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
+      opacity: 0.5;
+      border-radius: 5px; }
+      /* line 31, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+      .horizontal-slideshow > .nav a:hover {
+        opacity: 0.9; }
+    /* line 36, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+    .horizontal-slideshow > .nav.disabled {
+      opacity: 0; }
+      /* line 39, /Users/raw1z/workspace/projets/sof7-controls/app/css/_common.scss */
+      .horizontal-slideshow > .nav.disabled a {
+        cursor: default; }
+  /* line 12, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+  .horizontal-slideshow > .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background: #fff; }
+    /* line 88, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.row-layout {
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+    /* line 91, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.row-wrap-layout {
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+    /* line 94, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.column-layout {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    /* line 99, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.justify-left {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 102, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.justify-right {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 105, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.justify-center {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    /* line 108, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.justify-space-between {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    /* line 111, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.justify-space-around {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+    /* line 116, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-top {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 119, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-bottom {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 122, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-center {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+    /* line 125, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-stretch {
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+                  -ms-grid-row-align: stretch;
+              align-items: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch; }
+    /* line 128, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-space-between {
+      -ms-flex-line-pack: justify;
+          align-content: space-between; }
+    /* line 131, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide.align-space-around {
+      -ms-flex-line-pack: distribute;
+          align-content: space-around; }
+    /* line 135, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    /* line 138, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex-2 {
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
+    /* line 141, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex-3 {
+      -webkit-box-flex: 3;
+          -ms-flex: 3;
+              flex: 3; }
+    /* line 144, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex-4 {
+      -webkit-box-flex: 4;
+          -ms-flex: 4;
+              flex: 4; }
+    /* line 147, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex-5 {
+      -webkit-box-flex: 5;
+          -ms-flex: 5;
+              flex: 5; }
+    /* line 150, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .flex-6 {
+      -webkit-box-flex: 6;
+          -ms-flex: 6;
+              flex: 6; }
+    /* line 154, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .fill-vertical {
+      height: 100%;
+      min-height: 100%; }
+    /* line 157, /Users/raw1z/workspace/projets/sof7-controls/app/css/_flexbox.scss */
+    .horizontal-slideshow > .slide .fill-horizontal {
+      width: 100%;
+      min-width: 100%; }
+    /* line 16, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+    .horizontal-slideshow > .slide .slide-content {
+      width: 50%; }
+  /* line 21, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+  .horizontal-slideshow > .nav {
+    top: 0;
+    width: 30px;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+    /* line 27, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+    .horizontal-slideshow > .nav.nav-backward {
+      left: 0; }
+      /* line 29, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+      .horizontal-slideshow > .nav.nav-backward a {
+        -webkit-transform: translateX(15px) rotateZ(45deg);
+                transform: translateX(15px) rotateZ(45deg); }
+    /* line 34, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+    .horizontal-slideshow > .nav.nav-forward {
+      right: 0; }
+      /* line 36, /Users/raw1z/workspace/projets/sof7-controls/app/css/horizontal-slideshow.scss */
+      .horizontal-slideshow > .nav.nav-forward a {
+        -webkit-transform: translateX(-15px) rotateZ(45deg);
+                transform: translateX(-15px) rotateZ(45deg); }
 
-.pictures-wall{position:relative;width:100%;height:100%;overflow-x:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center;-ms-flex-flow:row wrap;flex-flow:row wrap}.pictures-wall.row-layout{-ms-flex-flow:row nowrap;flex-flow:row nowrap}.pictures-wall.row-wrap-layout{-ms-flex-flow:row wrap;flex-flow:row wrap}.pictures-wall.column-layout{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.pictures-wall.justify-left{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pictures-wall.justify-right{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pictures-wall.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pictures-wall.justify-space-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.pictures-wall.justify-space-around{-ms-flex-pack:distribute;justify-content:space-around}.pictures-wall.align-top{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.pictures-wall.align-bottom{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.pictures-wall.align-center{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}.pictures-wall.align-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;align-content:stretch}.pictures-wall.align-space-between{-ms-flex-line-pack:justify;align-content:space-between}.pictures-wall.align-space-around{-ms-flex-line-pack:distribute;align-content:space-around}.pictures-wall .flex{-webkit-box-flex:1;-ms-flex:1;flex:1}.pictures-wall .flex-2{-webkit-box-flex:2;-ms-flex:2;flex:2}.pictures-wall .flex-3{-webkit-box-flex:3;-ms-flex:3;flex:3}.pictures-wall .flex-4{-webkit-box-flex:4;-ms-flex:4;flex:4}.pictures-wall .flex-5{-webkit-box-flex:5;-ms-flex:5;flex:5}.pictures-wall .flex-6{-webkit-box-flex:6;-ms-flex:6;flex:6}.pictures-wall .fill-vertical{height:100%;min-height:100%}.pictures-wall .fill-horizontal{width:100%;min-width:100%}.pictures-wall .slide{position:relative;width:50%;height:50%}.pictures-wall .slide img{position:absolute;width:100%;top:0;left:0}.pictures-wall .slide .content{position:absolute;top:1rem;left:1rem;width:50%;background:rgba(34,34,34,0.3);color:#fff;padding:1rem}
 
+/*# sourceMappingURL=sof7-controls.css.map*/
